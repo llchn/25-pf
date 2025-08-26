@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <title>lily's little website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#hero">home</a>
+            <a href="#about">about</a>
+            <a href="#experience">experience</a>
+            <a href="#projects">projects</a>
+            <a href="#resume">resume</a>
+            <a href="#contact">contact</a>
+        </nav>
+        <!-- adding theme toggle button -->
+        <button id="theme-toggle" aria-label="Toggle theme"></button>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <div class="avatar-container">
+                    <img src="mymemoji.png" alt="Avatar of Lily">
+                </div>
+                <div class="hero-text">
+                    <span id="typed"></span>
+
+
+                    <!-- <h1 id="typed-strings">hi, i'm Lily!</h1> -->
+                    <!-- <p>Hello, world! ^500 My name is ^200 Lily. ^10000</p>
+                        <p>Xin chào, ^500 mình ^200 tên là Lily. ^5000</p> -->
+                </div>
+                <p class="subtitle">currently in the process of compiling...a career in tech. swapping textbooks for
+                    text
+                    editors whenever possible :)</p>
+            </div>
+            </div>
+        </section>
+
+        <section style="display: block; justify-items: center;" id="about">
+            <div class="content-wrapper">
+                <h2>about</h2>
+                <p>
+                    i'm a passionate sophomore CS student who loves building anything tech-related.
+                    i can do full-stack, but my interest lies in front-end technologies and creating engaging user
+                    interfaces.
+                    when i'm not coding, i enjoy putting random ideas into a template on figma for *potential* future
+                    use, drawing cute pixel stuff and playing
+                    Chopin.
+                </p>
+            </div>
+            <br />
+            <div>
+                <div id="piano">
+                    <div class="key white" data-note="C4"></div>
+                    <div class="key white" data-note="D4"></div>
+                    <div class="key white" data-note="E4"></div>
+                    <div class="key white" data-note="F4"></div>
+                    <div class="key white" data-note="G4"></div>
+                    <div class="key white" data-note="A4"></div>
+                    <div class="key white" data-note="B4"></div>
+                    <div class="key white" data-note="C5"></div>
+                    <div class="key white" data-note="D5"></div>
+                    <div class="key white" data-note="E5"></div>
+                    <div class="key black" data-note="Db4" style="left: 42.5px;"></div>
+                    <div class="key black" data-note="Eb4" style="left: 92.5px;"></div>
+                    <div class="key black" data-note="Gb4" style="left: 192.5px;"></div>
+                    <div class="key black" data-note="Ab4" style="left: 242.5px;"></div>
+                    <div class="key black" data-note="Bb4" style="left: 292.5px;"></div>
+                    <div class="key black" data-note="Db5" style="left: 392.5px;"></div>
+                    <div class="key black" data-note="Eb5" style="left: 442.5px;"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="experience">
+            <div class="content-wrapper">
+                <h2>experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item" id="mhc">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>software engineer intern</h3>
+                            <h4>Vietcombank in Hanoi, Vietnam</h4>
+                            <span class="date">summer 2024, summer 2025</span>
+                            <p>collaborated cross-functionally with product managers, UX researchers, and end-users to
+                                identify workflow frictions and gather requirements, ensuring the new system directly
+                                addressed user pain points.
+                                developed and maintained responsive web applications and internal tools using ReactJS,
+                                JavaScript, HTML5, and CSS3.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="content-wrapper">
+                <h2>education</h2>
+                <div class="timeline">
+                    <div class="timeline-item" id="moho">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>bachelor of arts in computer science</h3>
+                            <h4>Mount Holyoke College</h4>
+                            <span class="date">sep 2024 - may 2028</span>
+                            <p>coursework: algorithm, software design, data structure, discrete math, intro to cs. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="content-wrapper">
+                <h2>my little projects</h2>
+                <div class="project-grid">
+                    <div class="project-card" id="project-1">
+                        <h3>Paw Pals: a spirit animal quiz</h3>
+                        <p>a full-stack application with a React frontend and a Node.js/Express backend to
+                            securely
+                            integrate with the Google Gemini API, delivering unique, AI-generated personality results to
+                            users.</p>
+                        <a href="https://github.com/llchn/spirit-animal-quiz">view Paw Pals here!</a>
+                    </div>
+                    <div class="project-card" id="project-2">
+                        <h3>Pho Maker</h3>
+                        <p>a multi-stage interactive cooking game to celebrate
+                            Vietnamese
+                            cuisine (Pho) using React, JavaScript (ES6+), and CSS.</p>
+                        <a href="https://github.com/llchn/pho-maker-game">view Pho Maker here!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume">
+            <div class="content-wrapper">
+                <h2>resume</h2>
+                <p>my curriculum vitae!</p>
+                <div class="social-links">
+                    <a href="https://drive.google.com/file/d/1Te3dh_eqMjfkIIEd76zZN6flGbR3CrEM/view?usp=sharing"><img
+                            src="images/cv.png" alt=""></a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contact">
+            <div class="content-wrapper">
+                <h2>get in touch</h2>
+                <p>reach out to me at:</p>
+                <div class="social-links">
+                    <a href="mailto:tran222l@mtholyoke.edu"><img src="images/gmail.png" alt=""></a>
+                    <a href="https://github.com/llchn" target="_blank"><img src="images/github.png" alt=""></a>
+                    <a href="https://linkedin.com/in/lyktran" target="_blank"><img src="images/linkedin.png" alt=""></a>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- <script>
+
+    </script> -->
+
+
+    <script src="script.js"></script>
+
+</body>
+
+<div id="typed-strings">
+    <h1>hello, world! ^500 <br /> my name is ^200 Lily.^200</h1>
+    <h1>xin chào, ^500 <br /> mình ^200 tên là Lily.^5000</h1>
+</div>
+
+</html>
