@@ -142,9 +142,17 @@ p {
 
 #hero .hero-content {
     display: flex;
-    align-items: center;
-    justify-content: left;
+    flex-direction: column; /*top section and subtitle onto separate lines */
+    align-items: flex-start;
     margin: 100px;
+    gap: 2rem;
+}
+
+/* keep avatar and typed text side-by-side */
+#hero .hero-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 3rem;
     flex-wrap: wrap; 
 }
