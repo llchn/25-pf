@@ -264,7 +264,7 @@ p {
 }
 
 
-/*projects grid*/
+/* projects grid */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -282,43 +282,57 @@ p {
     transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
+/* 1. Create a pseudo-element to hold the background image and preload it */
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    z-index: 0; /* Keeps image behind the text */
+    pointer-events: none;
+}
+
+/* 2. Keep the card's text/content above the background image */
+.project-card > * {
+    position: relative;
+    z-index: 1; 
+}
+
+/* 3. Assign the images to the base states, not the hover states */
+#project-1::before {
+    background-image: var(--gradient), url('images/project-image-01.png');
+}
+
+#project-2::before {
+    background-image: var(--gradient), url('images/project-image-02.png');
+}
 
 .project-card:hover {
     transform: translateY(-5px);
     border-color: var(--primary-color);
 }
 
+/* 4. Fade in the preloaded image on hover */
+.project-card:hover::before {
+    opacity: 1;
+}
+
+/* 5. Fixed syntax error (removed the trailing comma) */
 .project-card:hover h3,
-.project-card:hover p,
-/* .project-card:hover a {
+.project-card:hover p {
     color: var(--primary-color); 
-} */
+}
 
 a {
     color: var(--primary-color); 
     font-weight: bold;
 }
-
-/*specific backgrounds*/
-
-/*prj1*/
-#project-1:hover {
-    background-image: 
-        var(--gradient),
-        url('images/project-image-01.png');
-    background-size: cover;
-    background-position: center;
-}
-
-/* prj2 */
-#project-2:hover {
-    background-image: 
-        var(--gradient),
-        url('images/project-image-02.png');
-    background-size: cover;
-    background-position: center;
-}
-
 /* contact section*/
 .social-links {
     margin-top: 2rem;
