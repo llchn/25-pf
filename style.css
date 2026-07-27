@@ -267,7 +267,7 @@ p {
 /* projects grid */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     width: 100%;
 }
@@ -312,6 +312,9 @@ p {
 #project-2::before {
     background-image: var(--gradient), url('images/project-image-02.png');
 }
+#project-breakpoints {
+    grid-column: span 2;
+}
 
 .project-card:hover {
     transform: translateY(-5px);
@@ -328,6 +331,8 @@ p {
 .project-card:hover p {
     color: var(--primary-color); 
 }
+
+
 
 a {
     color: var(--primary-color); 
@@ -488,5 +493,11 @@ a {
         transform: scale(0.6);
         margin-top: 2rem;
         margin-bottom: 2rem;
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    #project-breakpoints {
+        grid-column: span 1;
     }
 }
